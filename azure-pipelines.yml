@@ -1,0 +1,12 @@
+trigger:
+- main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- script: echo "Building Docker image"
+  displayName: 'Step 1'
+
+- script: docker build -t myapp .
+  displayName: 'Build Docker Image'
